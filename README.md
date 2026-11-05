@@ -1,13 +1,5 @@
 # TP 15 - Service GraphQL avec Spring Boot
 
-Service bancaire GraphQL nomme Banque GraphQL, developpe avec Spring Boot, Spring
-Data JPA et une base H2 en memoire. Le service expose neuf requetes de lecture et
-trois mutations autour des comptes bancaires et de leurs transactions, avec un
-contrat SDL unique et un point d acces HTTP.
-
-Realise par Ahmed Benidar - package ma.ahmedbenidar.tp15 - port 8085.
-
----
 
 ## 1. Outils utilises
 
@@ -225,33 +217,3 @@ de rattachement de chacun.
 ![Table TRANSACTION](docs/captures/h2-02-table-transaction.png)
 
 ---
-
-## 16. Personnalisation du travail
-
-Le sujet a ete suivi dans son ensemble, avec plusieurs choix propres pour eviter
-un rendu identique a celui des autres etudiants :
-
-- package et nom d application propres au projet, ma.ahmedbenidar.tp15 ;
-- port 8085 au lieu du port habituellement rencontre dans les corriges ;
-- champ titulaire ajoute a l entite compte, absent du sujet de base ;
-- troisieme type de compte ajoute, en plus de courant et epargne ;
-- champs maximal et minimal ajoutes aux statistiques de solde ;
-- champ solde net ajoute aux statistiques de transactions ;
-- requete de tableau de bord avec repartition par type, non demandee par le sujet ;
-- requetes supplementaires de filtre par type, de recherche par titulaire, de
-  liste globale des transactions et de suppression ;
-- mise a jour reelle du solde lors d un mouvement, avec refus du decouvert ;
-- journalisation des erreurs metier classees en mauvaise requete ;
-- noms de requetes, de mutations et de types en francais ;
-- dates exposees au format jour mois annee dans un sens et acceptees dans
-  plusieurs formats dans l autre ;
-- jeu de donnees d amorcage marocain avec six titulaires et des montants varies.
-
----
-
-## 17. Remarque sur la verification
-
-Aucune campagne de tests automatises n a ete ajoutee au projet, conformement a la
-consigne. La validation a ete faite manuellement, en envoyant les dix-huit
-operations sur le service reellement demarre, en lisant les reponses JSON
-renvoyees et en controlant le contenu des tables dans la console H2.
