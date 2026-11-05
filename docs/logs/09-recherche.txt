@@ -1,0 +1,5 @@
+﻿[$] curl -s -X POST http://localhost:8085/graphql -H Content-Type:application/json --data-binary @09-recherche.json
+---- REQUETE ----
+{"query":"query { rechercherComptes(fragment: \"el\") { id titulaire solde type } }"}
+---- REPONSE ----
+{"data":{"rechercherComptes":[{"id":"2","titulaire":"Salma El Fassi","solde":72350.5,"type":"EPARGNE"}]}}

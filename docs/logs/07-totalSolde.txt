@@ -1,0 +1,5 @@
+﻿[$] curl -s -X POST http://localhost:8085/graphql -H Content-Type:application/json --data-binary @07-totalSolde.json
+---- REQUETE ----
+{"query":"query { totalSolde { count sum average max min } }"}
+---- REPONSE ----
+{"data":{"totalSolde":{"count":7,"sum":302531.5,"average":43218.78571428572,"max":152000.0,"min":5100.0}}}

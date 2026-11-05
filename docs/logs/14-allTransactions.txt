@@ -1,0 +1,5 @@
+﻿[$] curl -s -X POST http://localhost:8085/graphql -H Content-Type:application/json --data-binary @14-allTransactions.json
+---- REQUETE ----
+{"query":"query { allTransactions { id montant date type compte { id titulaire } } }"}
+---- REPONSE ----
+{"data":{"allTransactions":[{"id":"1","montant":4500.0,"date":"05/07/2024","type":"DEPOT","compte":{"id":"1","titulaire":"Ahmed Benidar"}},{"id":"2","montant":1200.0,"date":"19/07/2024","type":"RETRAIT","compte":{"id":"1","titulaire":"Ahmed Benidar"}},{"id":"3","montant":15000.0,"date":"02/08/2024","type":"DEPOT","compte":{"id":"2","titulaire":"Salma El Fassi"}},{"id":"4","montant":2500.5,"date":"16/08/2024","type":"RETRAIT","compte":{"id":"2","titulaire":"Salma El Fassi"}},{"id":"5","montant":800.0,"date":"01/09/2024","type":"DEPOT","compte":{"id":"5","titulaire":"Karim Tazi"}},{"id":"6","montant":2200.0,"date":"05/12/2024","type":"DEPOT","compte":{"id":"3","titulaire":"Youssef Ouazzani"}}]}}

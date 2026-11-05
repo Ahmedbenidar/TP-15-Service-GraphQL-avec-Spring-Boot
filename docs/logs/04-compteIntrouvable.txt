@@ -1,0 +1,5 @@
+﻿[$] curl -s -X POST http://localhost:8085/graphql -H Content-Type:application/json --data-binary @04-compteIntrouvable.json
+---- REQUETE ----
+{"query":"query { compteById(id: 42) { id titulaire } }"}
+---- REPONSE ----
+{"errors":[{"message":"Compte 42 introuvable","locations":[{"line":1,"column":9}],"path":["compteById"],"extensions":{"classification":"BAD_REQUEST"}}],"data":{}}

@@ -1,0 +1,5 @@
+﻿[$] curl -s -X POST http://localhost:8085/graphql -H Content-Type:application/json --data-binary @06-soldeNegatif.json
+---- REQUETE ----
+{"query":"mutation { saveCompte(compte: { titulaire: \"Essai Rejete\", solde: -75.0, dateCreation: \"2024/12/01\", type: EPARGNE }) { id } }"}
+---- REPONSE ----
+{"errors":[{"message":"Le solde initial ne peut pas etre negatif","locations":[{"line":1,"column":12}],"path":["saveCompte"],"extensions":{"classification":"BAD_REQUEST"}}],"data":{}}

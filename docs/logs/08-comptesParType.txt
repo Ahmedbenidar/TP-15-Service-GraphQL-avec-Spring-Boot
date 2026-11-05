@@ -1,0 +1,5 @@
+﻿[$] curl -s -X POST http://localhost:8085/graphql -H Content-Type:application/json --data-binary @08-comptesParType.json
+---- REQUETE ----
+{"query":"query { comptesParType(type: PROFESSIONNEL) { id titulaire solde type } }"}
+---- REPONSE ----
+{"data":{"comptesParType":[{"id":"5","titulaire":"Karim Tazi","solde":32680.25,"type":"PROFESSIONNEL"}]}}

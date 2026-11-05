@@ -1,0 +1,5 @@
+﻿[$] curl -s -X POST http://localhost:8085/graphql -H Content-Type:application/json --data-binary @03-compteVariables.json
+---- REQUETE ----
+{"query":"query VoirCompte($id: ID) { compteById(id: $id) { id titulaire solde type } }","variables":{"id":4}}
+---- REPONSE ----
+{"data":{"compteById":{"id":"4","titulaire":"Nadia Bouhaddou","solde":152000.0,"type":"EPARGNE"}}}

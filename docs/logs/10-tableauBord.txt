@@ -1,0 +1,5 @@
+﻿[$] curl -s -X POST http://localhost:8085/graphql -H Content-Type:application/json --data-binary @10-tableauBord.json
+---- REQUETE ----
+{"query":"query { tableauBord { nombreComptes nombreTransactions soldeTotal repartition { type nombre solde } } }"}
+---- REPONSE ----
+{"data":{"tableauBord":{"nombreComptes":7,"nombreTransactions":5,"soldeTotal":302531.5,"repartition":[{"type":"COURANT","nombre":4,"solde":45500.75},{"type":"EPARGNE","nombre":2,"solde":224350.5},{"type":"PROFESSIONNEL","nombre":1,"solde":32680.25}]}}}

@@ -1,0 +1,5 @@
+﻿[$] curl -s -X POST http://localhost:8085/graphql -H Content-Type:application/json --data-binary @13-compteTransactions.json
+---- REQUETE ----
+{"query":"query { compteTransactions(id: 3) { id montant date type } }"}
+---- REPONSE ----
+{"data":{"compteTransactions":[{"id":"6","montant":2200.0,"date":"05/12/2024","type":"DEPOT"}]}}

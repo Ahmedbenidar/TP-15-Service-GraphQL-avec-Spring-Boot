@@ -1,0 +1,5 @@
+﻿[$] curl -s -X POST http://localhost:8085/graphql -H Content-Type:application/json --data-binary @01-allComptes.json
+---- REQUETE ----
+{"query":"query { allComptes { id titulaire solde dateCreation type } }"}
+---- REPONSE ----
+{"data":{"allComptes":[{"id":"1","titulaire":"Ahmed Benidar","solde":18500.0,"dateCreation":"15/01/2024","type":"COURANT"},{"id":"2","titulaire":"Salma El Fassi","solde":72350.5,"dateCreation":"03/02/2024","type":"EPARGNE"},{"id":"3","titulaire":"Youssef Ouazzani","solde":9400.75,"dateCreation":"21/03/2024","type":"COURANT"},{"id":"4","titulaire":"Nadia Bouhaddou","solde":152000.0,"dateCreation":"08/04/2024","type":"EPARGNE"},{"id":"5","titulaire":"Karim Tazi","solde":32680.25,"dateCreation":"30/05/2024","type":"PROFESSIONNEL"},{"id":"6","titulaire":"Imane Cherkaoui","solde":5100.0,"dateCreation":"12/06/2024","type":"COURANT"}]}}

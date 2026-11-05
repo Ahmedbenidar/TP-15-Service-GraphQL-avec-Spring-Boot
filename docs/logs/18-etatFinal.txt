@@ -1,0 +1,5 @@
+﻿[$] curl -s -X POST http://localhost:8085/graphql -H Content-Type:application/json --data-binary @18-etatFinal.json
+---- REQUETE ----
+{"query":"query { allComptes { id titulaire solde type } totalSolde { count sum } transactionStats { count soldeNet } }"}
+---- REPONSE ----
+{"data":{"allComptes":[{"id":"1","titulaire":"Ahmed Benidar","solde":18500.0,"type":"COURANT"},{"id":"2","titulaire":"Salma El Fassi","solde":72350.5,"type":"EPARGNE"},{"id":"3","titulaire":"Youssef Ouazzani","solde":11600.75,"type":"COURANT"},{"id":"4","titulaire":"Nadia Bouhaddou","solde":152000.0,"type":"EPARGNE"},{"id":"5","titulaire":"Karim Tazi","solde":32680.25,"type":"PROFESSIONNEL"},{"id":"6","titulaire":"Imane Cherkaoui","solde":5100.0,"type":"COURANT"}],"totalSolde":{"count":6,"sum":292231.5},"transactionStats":{"count":6,"soldeNet":18799.5}}}

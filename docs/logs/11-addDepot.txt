@@ -1,0 +1,5 @@
+﻿[$] curl -s -X POST http://localhost:8085/graphql -H Content-Type:application/json --data-binary @11-addDepot.json
+---- REQUETE ----
+{"query":"mutation { addTransaction(transaction: { compteId: 3, montant: 2200.0, date: \"2024/12/05\", type: DEPOT }) { id montant date type compte { id titulaire solde } } }"}
+---- REPONSE ----
+{"data":{"addTransaction":{"id":"6","montant":2200.0,"date":"05/12/2024","type":"DEPOT","compte":{"id":"3","titulaire":"Youssef Ouazzani","solde":11600.75}}}}

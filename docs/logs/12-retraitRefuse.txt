@@ -1,0 +1,5 @@
+﻿[$] curl -s -X POST http://localhost:8085/graphql -H Content-Type:application/json --data-binary @12-retraitRefuse.json
+---- REQUETE ----
+{"query":"mutation { addTransaction(transaction: { compteId: 6, montant: 99000.0, date: \"2024/12/06\", type: RETRAIT }) { id montant } }"}
+---- REPONSE ----
+{"errors":[{"message":"Retrait refuse : solde insuffisant sur le compte 6","locations":[{"line":1,"column":12}],"path":["addTransaction"],"extensions":{"classification":"BAD_REQUEST"}}],"data":{}}

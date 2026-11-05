@@ -1,0 +1,5 @@
+﻿[$] curl -s -X POST http://localhost:8085/graphql -H Content-Type:application/json --data-binary @15-transactionStats.json
+---- REQUETE ----
+{"query":"query { transactionStats { count sumDepots sumRetraits soldeNet } }"}
+---- REPONSE ----
+{"data":{"transactionStats":{"count":6,"sumDepots":22500.0,"sumRetraits":3700.5,"soldeNet":18799.5}}}

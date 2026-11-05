@@ -1,0 +1,5 @@
+﻿[$] curl -s -X POST http://localhost:8085/graphql -H Content-Type:application/json --data-binary @16-supprimerCompte.json
+---- REQUETE ----
+{"query":"mutation { supprimerCompte(id: 7) }"}
+---- REPONSE ----
+{"data":{"supprimerCompte":true}}

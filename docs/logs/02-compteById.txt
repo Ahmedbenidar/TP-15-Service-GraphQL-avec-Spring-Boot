@@ -1,0 +1,5 @@
+﻿[$] curl -s -X POST http://localhost:8085/graphql -H Content-Type:application/json --data-binary @02-compteById.json
+---- REQUETE ----
+{"query":"query { compteById(id: 1) { id titulaire solde dateCreation type transactions { id montant type } } }"}
+---- REPONSE ----
+{"data":{"compteById":{"id":"1","titulaire":"Ahmed Benidar","solde":18500.0,"dateCreation":"15/01/2024","type":"COURANT","transactions":[{"id":"2","montant":1200.0,"type":"RETRAIT"},{"id":"1","montant":4500.0,"type":"DEPOT"}]}}}

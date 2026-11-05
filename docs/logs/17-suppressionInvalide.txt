@@ -1,0 +1,5 @@
+﻿[$] curl -s -X POST http://localhost:8085/graphql -H Content-Type:application/json --data-binary @17-suppressionInvalide.json
+---- REQUETE ----
+{"query":"mutation { supprimerCompte(id: 77) }"}
+---- REPONSE ----
+{"errors":[{"message":"Compte 77 introuvable","locations":[{"line":1,"column":12}],"path":["supprimerCompte"],"extensions":{"classification":"BAD_REQUEST"}}],"data":{}}
